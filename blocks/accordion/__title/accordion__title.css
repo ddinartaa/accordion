@@ -1,0 +1,11 @@
+.accordion__title {
+    cursor: pointer;
+    padding: 5px 0;
+    text-align: center;
+    background-color: rgb(212, 212, 212);
+    border-radius: 10px;
+}
+
+.accordion__title:hover {
+    background-color: rgb(188, 188, 188);
+}
