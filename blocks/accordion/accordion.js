@@ -1,10 +1,16 @@
-document.querySelectorAll('.accordion').forEach(accordion => {
-    let openTitleCount = 0;
-    accordion.querySelectorAll('.accordion__item').forEach((accordionItem) => {
-        const title = accordionItem.querySelector('.accordion__title');
-        const text = accordionItem.querySelector('.accordion__text');
+const accordionClassName = '.accordion';
+const accordionItemClassName = '.accordion__item';
+const accordionTitleClassName = '.accordion__title';
+const accordionTextClassName = '.accordion__text';
+const accordionTextHiddenClassName = 'accordion__text_hidden';
+
+
+document.querySelectorAll(accordionClassName).forEach(accordion => {
+    accordion.querySelectorAll(accordionItemClassName).forEach((accordionItem) => {
+        const title = accordionItem.querySelector(accordionTitleClassName);
+        const text = accordionItem.querySelector(accordionTextClassName);
         title.addEventListener('click', () => {
-            text.classList.toggle('accordion__text_hidden');
+            text.classList.toggle(accordionTextHiddenClassName);
         });
     });
 });
